@@ -1,5 +1,6 @@
 <?php
  /**
+  * Napravio sam skriptu koja dohvaća sadržaj ODT dokumenta, sprema dokument na moj kompjuter, i ispisuje text u konzoli.
   */
 
  $odtFilePath = 'C:\Users\Alen\Desktop\ODTextracts';
@@ -11,6 +12,7 @@
  $url = 'https://api.adriatic.hr/test/it?'.$queryParamUser.'='.$queryParamValue;
  error_log($url);
 
+ // open and configure a new fetch request using cURL
  $ch = curl_init($url);
  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
@@ -22,6 +24,7 @@
 
  curl_close($ch);
 
+ // Check if the document content was fetched successfully
  if($getDocumentContent !== false) {
 
     $passwordFromQuery = $getDocumentContent;
@@ -39,6 +42,7 @@
     $result = $zip->open($pathToMyFile);
     error_log($result);
 
+    // Check if the .odt file was opened successfully
     if ($result === true) {
         // Extract the contents to the specified path
         $zip->extractTo($odtFilePath);
@@ -47,7 +51,9 @@
         $documentContent = file_get_contents($odtFilePath.'/content.xml');
         $xml = simplexml_load_string($documentContent);
 
+        // format XML text and hold it all in $allText variable. Grab every text:p element.
         $allText = '';
+
         foreach ($xml->xpath('//text:p') as $paragraph) {
             $allText .= trim((string)$paragraph) . ' ';
         }

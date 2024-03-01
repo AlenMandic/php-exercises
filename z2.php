@@ -10,13 +10,10 @@ function find($arrayA, $arrayB, $arrayC) :void {
     // Pronađimo vrijednosti koje su samo u '$arrayA'
     $uniqueInArrayA = array_diff($arrayA, $arrayB, $arrayC);
 
-    // Pronađimo vrijednosti koje su samo u $arrayB
     $uniqueInArrayB = array_diff($arrayB, $arrayA, $arrayC);
    
-    // Pronađimo vrijednosti koje su samo u $arrayC
     $uniqueInArrayC = array_diff($arrayC, $arrayA, $arrayB);
 
-    // Rezultate možemo ispisati pomoću 'echo' konstrukta, PHP_EOL osigurava siguran 'line-break'
     echo "Common values: " . print_r($commonValues, true) . PHP_EOL;
     echo "Unique values in array A: " . print_r($uniqueInArrayA, true) . PHP_EOL;
     echo "Unique values in array B: " . print_r($uniqueInArrayB, true) . PHP_EOL;

@@ -2,7 +2,7 @@
 // Funkcija koja uzima 2 argumenta i vraća niz
 function getClosestNumbers($options, $number): array {
 
-    //'array_map' metoda će stvoriti novi niz brojeva uz anonimnu callback funkciju koja ce izračunati absolutnu razliku između brojeva i broja kojeg tražimo.
+    //'array_map' metoda će stvoriti novi niz brojeva uz anonimnu callback funkciju koja ce izračunati apsolutnu razliku između brojeva i broja kojeg tražimo.
     $absoluteDifference = array_map(function($option) use ($number) {
         return abs($option - $number);
     }, $options);
