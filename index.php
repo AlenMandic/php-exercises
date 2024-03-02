@@ -42,7 +42,7 @@ $receipt = new Receipt();
         <?php echo $receipt->generateTable2HTML(); ?>
     </table>
 
-    <p class="note smaller-text">Uplatom akontacije gost potvrđuje da je upoznat te se slaže s Općim uvjetima pružanja usluga smještaja u privatnim objektima.</p>
+    <p class="smaller-text">Uplatom akontacije gost potvrđuje da je upoznat te se slaže s Općim uvjetima pružanja usluga smještaja u privatnim objektima.</p>
 
   </div>
  </body>

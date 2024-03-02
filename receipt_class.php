@@ -2,7 +2,8 @@
 /** Napravio novu klasu Recept koja drži privatne podatke računa po modelu vaše slike. Ovi privatni podaci u stvarnosti
    * naprimjer mogu doći iz forme sa front-end dijela stranice ovisno o korisničkoj akciji, te prema njima mijenjamo i izbacujemo HTML
    *  podatke  po potrebi. Ovu klasu ćemo podijelit sa našim 'index.php' file-om pomoću 'include_once' ključne riječi. Na taj način će statični HTML iz 'index.php' imat pristup metodama naše klase, te sa logičkim dijelom/podacima naše aplikacije koji se nalazi ovdje.
-   * Također sam se pobrinuo da je dokument responzivan na svakom ekranu
+   * Također sam se pobrinuo da je dokument responzivan na svakom ekranu.
+   * Provjeru koda i testiranje sam radio pomoću built-in PHP servera: php -S localhost:3000
 */
 
 class Receipt {
@@ -29,7 +30,7 @@ class Receipt {
         return '
             <tr>
                 <td class="td-flex" id="big-container">
-                    <p class="td-flex-item">' . $this->tipUsluge . '</p>
+                    <p class="td-flex-item" id="service-type">' . $this->tipUsluge . '</p>
                     <p class="td-flex-item smaller-text" id="td-flex-shrink">' . $this->rasponDatuma . '</p>
                     <p class="td-flex-item smaller-text">' . $this->brojLjudi . ' (osobe)</p>
                 </td>

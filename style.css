@@ -4,7 +4,7 @@ body {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 700px;
   margin: 0 auto;
 }
 
@@ -86,6 +86,10 @@ table {
 }
 
 @media only screen and (max-width: 500px) {
+  .container {
+    max-width: 500px;
+  }
+
   .smaller-text {
     font-size: 11px;
   }
@@ -97,5 +101,15 @@ table {
   .td-flex-item {
     margin: 7px;
     border: none;
+  }
+
+  #service-type {
+    font-size: 11px;
+  }
+}
+
+@media only screen and (max-width: 370px) {
+  .container {
+    width: 370px;
   }
 }

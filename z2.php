@@ -7,7 +7,7 @@ function find($arrayA, $arrayB, $arrayC) :void {
     // pronađimo zajedničke vrijednosti
    $commonValues = array_intersect($arrayA, $arrayB, $arrayC);
 
-    // Pronađimo vrijednosti koje su samo u '$arrayA'
+    // Pronađimo vrijednosti koje su samo u jednom od nizova
     $uniqueInArrayA = array_diff($arrayA, $arrayB, $arrayC);
 
     $uniqueInArrayB = array_diff($arrayB, $arrayA, $arrayC);
@@ -15,6 +15,7 @@ function find($arrayA, $arrayB, $arrayC) :void {
     $uniqueInArrayC = array_diff($arrayC, $arrayA, $arrayB);
 
     echo "Common values: " . print_r($commonValues, true) . PHP_EOL;
+
     echo "Unique values in array A: " . print_r($uniqueInArrayA, true) . PHP_EOL;
     echo "Unique values in array B: " . print_r($uniqueInArrayB, true) . PHP_EOL;
     echo "Unique values in array C: " . print_r($uniqueInArrayC, true) . PHP_EOL;
@@ -25,4 +26,5 @@ $ourArrayB = ['a', 'b2', 'c', 'dad', 'rc', '24', '222'];
 $ourArrayC = ['222', 'a', 'be', 'rc', 'dd', '234', '22', 'pp'];
 
 find($ourArrayA, $ourArrayB, $ourArrayC);
+
 ?>

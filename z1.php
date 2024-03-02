@@ -8,7 +8,7 @@ function getClosestNumbers($options, $number): array {
     }, $options);
     error_log("Absolute difference: " . print_r($absoluteDifference, true));
 
-    //'array_combine' metoda će stvoriti novi niz koji sadrži brojeve( 'array keys' od niza $options ) i njihove absolutne razlike('array values' od niza $absoluteDifference).
+    // Novi niz kao kombinacija nizova '$options' i '$absoluteDifference'
     $combinedArray = array_combine($options, $absoluteDifference);
     error_log("Combined array: " . print_r($combinedArray, true));
 
