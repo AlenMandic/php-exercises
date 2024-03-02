@@ -1,14 +1,8 @@
 <?php
-/** Napravio novu klasu Recept koja drži privatne podatke računa po modelu vaše slike. Ovi privatni podaci u stvarnosti
-   * naprimjer mogu doći iz forme sa front-end dijela stranice ovisno o korisničkoj akciji, te prema njima mijenjamo i izbacujemo HTML
-   *  podatke  po potrebi. Ovu klasu ćemo podijelit sa našim 'index.php' file-om pomoću 'include_once' ključne riječi. Na taj način će statični HTML iz 'index.php' imat pristup metodama naše klase, te sa logičkim dijelom/podacima naše aplikacije koji se nalazi ovdje.
-   * Također sam se pobrinuo da je dokument responzivan na svakom ekranu.
-   * Provjeru koda i testiranje sam radio pomoću built-in PHP servera: php -S localhost:3000
-*/
 
 class Receipt {
 
-    // Table 1 data
+    // Table 1 data. Dolazni podaci.
     private $tipUsluge = "AS-16950-a";
     private $rasponDatuma = "08.08.2022 - 15.08.2022";
     private $brojLjudi = 2;
@@ -25,7 +19,7 @@ class Receipt {
         return $this->cijena * $this->brojNoćenja;
     }
 
-    // dio HTML-a koji treba koristiti logiku klase
+    // Generate table 1 dynamic data
     public function generateTable1HTML() {
         return '
             <tr>
@@ -48,7 +42,7 @@ class Receipt {
         ';
     }
 
-    // dio HTML-a koji treba koristiti logiku klase
+    // Generate Table 2 dynamic data
     public function generateTable2HTML() {
         return '
             <tr>

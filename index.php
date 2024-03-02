@@ -1,5 +1,4 @@
 <?php
-// Učitajmo našu klasu i pokrenimo novu instancu klase, da bi mogli ubaciti dinamične podatke u HTML
 include_once 'receipt_class.php';
 
 $receipt = new Receipt();
@@ -16,7 +15,7 @@ $receipt = new Receipt();
 
 <body>
 <div class="container">
-    <p class="title">PREDRAČUN BR. 2022-16950-63 ZA USLUGU SMJEŠTAJA</p>
+    <h2 class="title">PREDRAČUN BR. 2022-16950-63 ZA USLUGU SMJEŠTAJA</h2>
 
     <table class="item-table table1">
         <tr>
@@ -30,7 +29,7 @@ $receipt = new Receipt();
 
     <p class="included smaller-text">Uključeno u cijenu (bez dodatne naplate): turistička pristojba</p>
 
-    <p class="payments-title">DINAMIKA PLAĆANJA</p>
+    <h2 class="payments-title">DINAMIKA PLAĆANJA</h2>
 
     <table class="payment-table">
         <tr>
