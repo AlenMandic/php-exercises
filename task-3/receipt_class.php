@@ -1,5 +1,8 @@
 <?php
 
+// A receipt class which generated dynamic HTML for receipts. To run and test the code:
+// ->cd into this directory 'task' and run 'php -S localhost:3000' and open localhost:3000 in your browser
+
 class Receipt {
 
     // Table 1 data. Dolazni podaci.

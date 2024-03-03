@@ -1,4 +1,7 @@
 <?php
+/**
+ * From different sequences, find values which are in all 3 sequences, and values which are in only one sequence.
+ */
 
 function find($arrayA, $arrayB, $arrayC) :void {
 

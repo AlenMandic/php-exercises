@@ -1,4 +1,8 @@
 <?php
+/** 
+ * Write a function which returns the closest numbers from a sequence based on an input number
+ */
+
 function getClosestNumbers($options, $number): array {
 
     $absoluteDifference = array_map(function($option) use ($number) {
